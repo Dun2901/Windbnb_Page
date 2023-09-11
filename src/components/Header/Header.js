@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 import "./Header.scss";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
+import { GrFormClose } from "react-icons/gr";
 
 const stayDetails = [
   {
@@ -168,6 +169,10 @@ function Header() {
     setCardsCount(list_of_Cards.length);
   }, [location, guestCount, setCards]);
 
+  const closeDrawer = () => {
+    setDrawerOpen(false);
+  };
+
   return (
     <div className={`App`}>
       {/* Drawer */}
@@ -177,6 +182,9 @@ function Header() {
             {/* Header Box */}
             <div className="drawer-header no-display-big">
               <span>Edit your search</span>
+              <button onClick={closeDrawer}>
+                <GrFormClose />
+              </button>
               <span onClick={() => setDrawerOpen(false)}></span>
             </div>
             {/* Search Box */}

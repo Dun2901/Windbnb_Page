@@ -344,3 +344,19 @@ button {
 .material-icons {
   color: #eb5757;
 }
+
+/* Header.scss or your CSS file */
+.drawer-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333; /* Màu của nút X */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.drawer-header button:hover {
+  color: #ff0000; /* Màu khi di chuột vào nút X */
+}
